@@ -19,6 +19,7 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.JButton;
 import java.awt.Component;
+import javax.swing.ScrollPaneConstants;
 
 /**
  * @author vntime
@@ -55,6 +56,7 @@ public class LayoutScrollError extends JFrame {
         setContentPane(contentPane);
         
         JScrollPane scrollPane = new JScrollPane();
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setViewportBorder(new LineBorder(new Color(0, 0, 0)));
         GroupLayout gl_contentPane = new GroupLayout(contentPane);
         gl_contentPane.setHorizontalGroup(
@@ -69,21 +71,21 @@ public class LayoutScrollError extends JFrame {
         );
         
         JPanel panel = new JPanel();
+        panel.setBorder(new LineBorder(new Color(0, 0, 0)));
         panel.setAlignmentY(Component.TOP_ALIGNMENT);
         panel.setAlignmentX(Component.LEFT_ALIGNMENT);
         scrollPane.setViewportView(panel);
         
         JPanel panel_1 = new JPanel();
+        panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
         panel_1.setAlignmentY(Component.TOP_ALIGNMENT);
         panel_1.setAlignmentX(Component.LEFT_ALIGNMENT);
-        panel_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
         GroupLayout gl_panel = new GroupLayout(panel);
         gl_panel.setHorizontalGroup(
             gl_panel.createParallelGroup(Alignment.LEADING)
                 .addGroup(gl_panel.createSequentialGroup()
                     .addGap(1)
-                    .addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 605, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(1, Short.MAX_VALUE))
+                    .addComponent(panel_1, GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE))
         );
         gl_panel.setVerticalGroup(
             gl_panel.createParallelGroup(Alignment.LEADING)
